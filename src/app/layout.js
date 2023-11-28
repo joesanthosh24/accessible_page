@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
           <a class="navbar-brand" href="#">
             <img
               class="page-logo"
-              src="/empowerabilitylabslogo.png"
+              src="/accessible_page/public/images/empowerabilitylabslogo.png"
               alt="Empower Ability Labs Logo"
             />
           </a>
