@@ -1,5 +1,9 @@
 import styles from "./page.module.css";
 
+export const metadata = {
+  title: "Services",
+};
+
 export default function Services() {
   return (
     <>
