@@ -38,9 +38,10 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
           <a class="navbar-brand" href="#">
+            {/* When testing locally, use src as "/public/images/..." but before pushing code, set src to "/public/images/..." */}
             <img
               class="page-logo"
-              src="/images/empowerabilitylabslogo.png"
+              src="/public/images/empowerabilitylabslogo.png"
               alt="Empower Ability Labs Logo"
             />
           </a>
