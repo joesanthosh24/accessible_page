@@ -31,7 +31,7 @@ export default function Home() {
       </div>
 
       <div class="container">
-        <h2 className="community">Meeth The Empower Community</h2>
+        <h2 className="community">Meet The Empower Community</h2>
         <div class="row">
           <div class="col-md-4">
             <h3>Lorem 1</h3>
