@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
-import Link from "next/link";
+
+import Navbar from "../components/Navbar";
 
 import "./globals.css";
 
@@ -36,42 +37,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={inter.className}>
-        <div class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <a class="navbar-brand" href="#">
-            <img
-              class="page-logo"
-              src="./images/empowerabilitylabslogo.png"
-              alt="Empower Ability Labs Logo"
-            />
-          </a>
-          <nav>
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <Link href="/" legacyBehavior>
-                    <a title="Home Page" class="nav-link">
-                      Home
-                    </a>
-                  </Link>
-                </li>
-                <li class="nav-item active">
-                  <Link href="/services" legacyBehavior>
-                    <a title="Services Page" class="nav-link">
-                      Services
-                    </a>
-                  </Link>
-                </li>
-                <li class="nav-item active">
-                  <Link href="/schedule-call" legacyBehavior>
-                    <a title="Schedule a Call Page" class="nav-link">
-                      Schedule a Call
-                    </a>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+        <Navbar />
         <main>{children}</main>
         <footer class="container">
           <p>Copyright Accessible Knowledge Base 2023</p>
