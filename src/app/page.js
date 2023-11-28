@@ -40,7 +40,11 @@ export default function Home() {
               tellus ac cursus commodo. Donec id elit non mi porta gravida at
               eget metus. Fusce dapibus, tellus ac cursus commodo.
             </p>
-            <a href="https://www.google.com" target="_blank">
+            <a
+              href="https://www.google.com"
+              target="_blank"
+              title="External Page Google"
+            >
               Learn More
             </a>
           </div>
@@ -51,7 +55,11 @@ export default function Home() {
               tellus ac cursus commodo. Donec id elit non mi porta gravida at
               eget metus. Fusce dapibus, tellus ac cursus commodo.
             </p>
-            <a href="https://www.google.com" target="_blank">
+            <a
+              href="https://www.google.com"
+              target="_blank"
+              title="External Page Google"
+            >
               Learn More
             </a>
           </div>
@@ -62,7 +70,11 @@ export default function Home() {
               tellus ac cursus commodo. Donec id elit non mi porta gravida at
               eget metus. Fusce dapibus, tellus ac cursus commodo.
             </p>
-            <a href="https://www.google.com" target="_blank">
+            <a
+              href="https://www.google.com"
+              target="_blank"
+              title="External Page Google"
+            >
               Learn More
             </a>
           </div>
