@@ -105,6 +105,14 @@ a {
   width: 150px;
 }
 
+legend {
+  width: fit-content !important;
+}
+
+label {
+  margin-bottom: 0 !important;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

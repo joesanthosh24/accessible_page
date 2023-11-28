@@ -1,0 +1,12 @@
+.fieldset {
+  border: 2px solid #000;
+  padding: 10px;
+}
+
+.legend {
+  display: inline-block;
+}
+
+.checkbox {
+  margin-right: 10px;
+}

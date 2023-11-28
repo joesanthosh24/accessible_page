@@ -1,3 +1,5 @@
+import styles from "./page.module.css";
+
 export default function ScheduleCall() {
   return (
     <>
@@ -35,6 +37,35 @@ export default function ScheduleCall() {
             </label>
             <input type="text" className="form-control" id="email" />
           </div>
+          <fieldset className={`${styles.fieldset}`}>
+            <legend className={`${styles.legend}`}>
+              What would you like to talk about
+            </legend>
+            <div className="form-group d-flex items-center">
+              <input
+                className={styles.checkbox}
+                type="checkbox"
+                id="awareness"
+              />
+              <label htmlFor="awareness">
+                Awareness Lab Days and workshops
+              </label>
+            </div>
+            <div className="form-group d-flex items-center">
+              <input className={styles.checkbox} type="checkbox" id="invite" />
+              <label htmlFor="invite">
+                Invite a speaker with disabilities to your event
+              </label>
+            </div>
+            <div className="form-group d-flex items-center">
+              <input
+                className={styles.checkbox}
+                type="checkbox"
+                id="usability"
+              />
+              <label htmlFor="usability">Usability testing</label>
+            </div>
+          </fieldset>
         </form>
       </div>
     </>
