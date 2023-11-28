@@ -48,18 +48,24 @@ export default function RootLayout({ children }) {
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <Link href="/" class="nav-link">
-                    Home
+                  <Link href="/" legacyBehavior>
+                    <a title="Home Page" class="nav-link">
+                      Home
+                    </a>
                   </Link>
                 </li>
                 <li class="nav-item active">
-                  <Link href="/services" class="nav-link">
-                    Services
+                  <Link href="/services" legacyBehavior>
+                    <a title="Services Page" class="nav-link">
+                      Services
+                    </a>
                   </Link>
                 </li>
                 <li class="nav-item active">
-                  <Link href="/schedule-call" class="nav-link">
-                    Schedule a Call
+                  <Link href="/schedule-call" legacyBehavior>
+                    <a title="Schedule a Call Page" class="nav-link">
+                      Schedule a Call
+                    </a>
                   </Link>
                 </li>
               </ul>
