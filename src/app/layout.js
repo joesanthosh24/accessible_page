@@ -58,9 +58,9 @@ export default function RootLayout({ children }) {
                   </Link>
                 </li>
                 <li class="nav-item active">
-                  <a href="#" class="nav-link">
+                  <Link href="/schedule-call" class="nav-link">
                     Schedule a Call
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
