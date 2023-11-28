@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import Head from "next/head";
+import Link from "next/link";
 
 import "./globals.css";
 
@@ -48,14 +48,14 @@ export default function RootLayout({ children }) {
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a href="#" class="nav-link">
+                  <Link href="/" class="nav-link">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-item active">
-                  <a href="#" class="nav-link">
+                  <Link href="/services" class="nav-link">
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-item active">
                   <a href="#" class="nav-link">
