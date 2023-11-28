@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <div class="jumbotron">
         <div class="container">
-          <h2 class="h2">Welcome to Empower Ability Labs!</h2>
+          <h1 class="h2">Welcome to Empower Ability Labs!</h1>
           <p>
             Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
             tellus ac cursus commodo, tortor mauris condimentum nibh, ut
