@@ -29,9 +29,9 @@ export default function Home() {
               from their perspective.
             </p>
             <a
-              href="https://www.google.com"
+              href="https://www.google.com/search/howsearchworks/our-approach/"
               target="_blank"
-              title="External Page Google"
+              title="Our Approach"
             >
               Learn More
             </a>
@@ -47,9 +47,9 @@ export default function Home() {
               <li>Inspirational speakers.</li>
             </ul>
             <a
-              href="https://www.google.com"
+              href="https://www.elevenways.be/en/services"
               target="_blank"
-              title="External Page Google"
+              title="Services"
             >
               Learn More
             </a>
@@ -63,9 +63,9 @@ export default function Home() {
               understanding of inclusion.
             </p>
             <a
-              href="https://www.google.com"
+              href="https://dictionary.cambridge.org/us/dictionary/english/testimonial"
               target="_blank"
-              title="External Page Google"
+              title="Testimonials"
             >
               Learn More
             </a>
