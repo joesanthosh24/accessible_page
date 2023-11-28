@@ -13,17 +13,10 @@ export default function Services() {
             <div className="col-md-8">
               <h1>Our Services</h1>
               <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-                tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                fermentum massa justo sit amet risus. Etiam porta sem malesuada
-                magna mollis euismod. Donec sed odio dui. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Dedicated space or programs designed to cultivate empathy and
+                understanding among individuals towards the challenges faced by
+                people with disabilities in using technology and interacting
+                with various environments.
               </p>
             </div>
             <div className="col-md-4 d-flex justify-content-center">
@@ -38,19 +31,34 @@ export default function Services() {
       </div>
       <div className={`${styles.servicesContainer} container`}>
         <div>
-          <h2>Service 1</h2>
+          <h2>Empathy Lab days and workshops</h2>
           <p>
-            Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-            tellus ac cursus commodo. Donec id elit non mi porta gravida at eget
-            metus. Fusce dapibus, tellus ac cursus commodo.
+            The lab days and workshops typically provide hands-on experiences,
+            simulations, and interactions with assistive technologies, tools,
+            and scenarios that replicate the obstacles individuals with
+            disabilities encounter daily.
           </p>
         </div>
         <div>
-          <h2>Service 2</h2>
+          <h2>Inspirational speakers</h2>
           <p>
-            Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-            tellus ac cursus commodo. Donec id elit non mi porta gravida at eget
-            metus. Fusce dapibus, tellus ac cursus commodo.
+            Invite a speaker with disabilities to take share their unique
+            journey. This captivating addition to your upcoming event will offer
+            insights that resonate, inspire, educate, and enrich your team
+            collective understanding of inclusion.
+          </p>
+        </div>
+        <div>
+          <h2>Usability testing</h2>
+          <p>
+            Go beyond WCAG! Involve individuals with disabilities in usability
+            testing to gather valuable insights for refining product strategy
+            and identifying accessibility concerns at an early stage when
+            solutions are more feasible and cost-effective. You have access to a
+            diverse community of people with disabilities, who use various
+            assistive technologies. With technical expertise ranging from novice
+            to expert, our community can support your product lifecycle from
+            user research, to design, to QA.
           </p>
         </div>
       </div>

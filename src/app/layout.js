@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Navbar />
         <main>{children}</main>
-        <footer class="container">
+        <footer className="container">
           <p>Copyright Accessible Knowledge Base 2023</p>
         </footer>
       </body>
