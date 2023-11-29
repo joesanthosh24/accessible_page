@@ -30,11 +30,6 @@ export default function Home() {
           />
           <HomeContentWithLinkContainer
             rowContent={data.rowContent && data.rowContent.services}
-            listItems={
-              data.rowContent &&
-              data.rowContent.services &&
-              data.rowContent.services.listItems
-            }
           />
           <HomeContentWithLinkContainer
             rowContent={data.rowContent && data.rowContent.testimonials}

@@ -1,7 +1,4 @@
-export default function HomeContentWithLinkContainer({
-  rowContent,
-  listItems,
-}) {
+export default function HomeContentWithLinkContainer({ rowContent }) {
   return rowContent ? (
     <div className="col-md-4">
       <h3>{rowContent.heading}</h3>
