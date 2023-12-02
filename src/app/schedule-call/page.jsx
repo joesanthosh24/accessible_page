@@ -1,10 +1,13 @@
+"use client";
+import { useState } from "react";
+
+import CustomSwitch from "../../components/custom-switch/custom-switch.component";
+
 import styles from "./page.module.css";
 
-export const metadata = {
-  title: "Schedule a Call",
-};
-
 export default function ScheduleCall() {
+  const [receiveEmails, setReceiveEmails] = useState(false);
+
   return (
     <>
       <div className="headingContent">
@@ -73,12 +76,17 @@ export default function ScheduleCall() {
             <textarea id="event-desc"></textarea>
           </div>
           <div className="form-group d-flex items-center">
-            {/* Will add an on/off switch component for receiving emails about updates and services */}
+            <CustomSwitch
+              toggleChecked={setReceiveEmails}
+              toggleStatus={receiveEmails}
+              labelText="Receive emails about updates and services"
+            />
           </div>
           <button className={styles.scheduleCallBtn} type="submit">
             Schedule a Call
           </button>
         </form>
+        <p>{receiveEmails}</p>
         <hr />
       </div>
     </>
