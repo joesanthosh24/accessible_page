@@ -114,6 +114,11 @@ label {
   margin-bottom: 0 !important;
 }
 
+.headingContent {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

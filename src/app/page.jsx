@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <div className="jumbotron">
+      <div className="headingContent">
         <div className="container">
           <h1>Welcome to Empower Ability Labs!</h1>
           <p>
