@@ -10,3 +10,17 @@
 .checkbox {
   margin-right: 10px;
 }
+
+.scheduleCallBtn {
+  padding: 5px 20px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+}
+
+.scheduleCallBtn:active,
+.scheduleCallBtn:focus {
+  outline: none;
+  border-radius: 5px solid #007bff;
+}

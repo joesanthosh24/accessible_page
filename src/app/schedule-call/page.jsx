@@ -75,7 +75,9 @@ export default function ScheduleCall() {
           <div className="form-group d-flex items-center">
             {/* Will add an on/off switch component for receiving emails about updates and services */}
           </div>
-          <button type="submit">Schedule a Call</button>
+          <button className={styles.scheduleCallBtn} type="submit">
+            Schedule a Call
+          </button>
         </form>
         <hr />
       </div>
