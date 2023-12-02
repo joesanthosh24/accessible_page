@@ -86,7 +86,6 @@ export default function ScheduleCall() {
             Schedule a Call
           </button>
         </form>
-        <p>{receiveEmails}</p>
         <hr />
       </div>
     </>
