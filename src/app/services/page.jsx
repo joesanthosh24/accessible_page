@@ -7,7 +7,7 @@ export const metadata = {
 export default function Services() {
   return (
     <>
-      <div className="jumbotron">
+      <div className="headingContent">
         <div className="container">
           <div className="row">
             <div className="col-md-8">
@@ -61,6 +61,7 @@ export default function Services() {
             user research, to design, to QA.
           </p>
         </div>
+        <hr />
       </div>
     </>
   );

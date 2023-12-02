@@ -7,7 +7,7 @@ export const metadata = {
 export default function ScheduleCall() {
   return (
     <>
-      <div className="jumbotron">
+      <div className="headingContent">
         <div className="container">
           <h1>Schedule a Call</h1>
           <p>
@@ -77,6 +77,7 @@ export default function ScheduleCall() {
           </div>
           <button type="submit">Schedule a Call</button>
         </form>
+        <hr />
       </div>
     </>
   );
