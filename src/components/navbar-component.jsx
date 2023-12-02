@@ -2,12 +2,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import styles from "./navbar-component.module.css";
+
 const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a className="navbar-brand" href="/">
+    <div className={styles.navbarContainer}>
+      <a href="/">
         <img
           className="page-logo"
           src="./images/empowerabilitylabslogo.png"
@@ -15,31 +17,33 @@ const Navbar = () => {
         />
       </a>
       <nav>
-        <div className="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul className="navbar-nav mr-auto">
-            <li className={`nav-item ${pathname === "/" ? "active" : ""}`}>
+        <div>
+          <ul className={styles.aNavbarList}>
+            <li className={`${pathname === "/" ? styles.activeItemLink : ""}`}>
               <Link href="/" legacyBehavior>
-                <a title="Home Page" className="nav-link">
+                <a className={styles.itemLink} title="Home Page">
                   Home
                 </a>
               </Link>
             </li>
             <li
-              className={`nav-item ${pathname === "/services" ? "active" : ""}`}
+              className={`${
+                pathname === "/services" ? styles.activeItemLink : ""
+              }`}
             >
               <Link href="/services" legacyBehavior>
-                <a title="Services Page" className="nav-link">
+                <a className={styles.itemLink} title="Services Page">
                   Services
                 </a>
               </Link>
             </li>
             <li
-              className={`nav-item ${
-                pathname === "/schedule-call" ? "active" : ""
+              className={`${
+                pathname === "/schedule-call" ? styles.activeItemLink : ""
               }`}
             >
               <Link href="/schedule-call" legacyBehavior>
-                <a title="Schedule a Call Page" className="nav-link">
+                <a className={styles.itemLink} title="Schedule a Call Page">
                   Schedule a Call
                 </a>
               </Link>
