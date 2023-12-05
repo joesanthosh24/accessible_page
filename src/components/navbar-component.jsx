@@ -9,13 +9,15 @@ const Navbar = () => {
 
   return (
     <div className={styles.navbarContainer}>
-      <a href="/">
-        <img
-          className="page-logo"
-          src="./images/empowerabilitylabslogo.png"
-          alt="Empower Ability Labs Logo"
-        />
-      </a>
+      <Link href="/" legacyBehavior>
+        <a title="Empower Ability Labs Logo">
+          <img
+            className="page-logo"
+            src="./images/empowerabilitylabslogo.png"
+            alt="Empower Ability Labs Logo"
+          />
+        </a>
+      </Link>
       <nav>
         <div>
           <ul className={styles.aNavbarList}>
