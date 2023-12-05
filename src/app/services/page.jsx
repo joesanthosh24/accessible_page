@@ -23,7 +23,8 @@ export default function Services() {
               <img
                 className="img-fluid"
                 src="./images/services.png"
-                alt="Empower Ability Labs Logo"
+                alt="Smiley Face doing thumbs up"
+                tabIndex="0"
               />
             </div>
           </div>
