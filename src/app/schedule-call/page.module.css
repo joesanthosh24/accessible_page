@@ -21,6 +21,5 @@
 
 .scheduleCallBtn:active,
 .scheduleCallBtn:focus {
-  outline: none;
   border-radius: 5px solid #007bff;
 }
