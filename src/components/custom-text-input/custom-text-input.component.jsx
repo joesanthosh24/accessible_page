@@ -8,7 +8,6 @@ const CustomInput = ({
   type,
   required,
   otherAttributes,
-  handleError,
   name,
 }) => {
   return (
@@ -24,7 +23,6 @@ const CustomInput = ({
         value={val}
         required={required ? true : false}
         {...otherAttributes}
-        onInvalid={handleError}
         name={name}
       />
     </div>
