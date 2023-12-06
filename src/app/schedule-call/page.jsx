@@ -83,10 +83,12 @@ export default function ScheduleCall() {
               handleChecked={updateCheckboxValue}
             />
           </fieldset>
-          <div className="d-flex flex-column items-center">
-            <label htmlFor="event-desc">Tell us about your Event</label>
-            <textarea id="event-desc"></textarea>
-          </div>
+          {selectedCheckboxValues.invite && (
+            <div className="d-flex flex-column items-center">
+              <label htmlFor="event-desc">Tell us about your Event</label>
+              <textarea id="event-desc"></textarea>
+            </div>
+          )}
           <div className="form-group d-flex items-center">
             <CustomSwitch
               toggleChecked={setReceiveEmails}
