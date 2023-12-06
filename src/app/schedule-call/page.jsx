@@ -8,14 +8,18 @@ import CustomInput from "@/components/custom-text-input/custom-text-input.compon
 import CustomCheckbox from "@/components/custom-checkbox/custom-checkbox.component";
 
 export default function ScheduleCall() {
-  let [receiveEmails, setReceiveEmails] = useState(false);
-  let [businessName, setBusinessName] = useState("");
-  let [phoneNumber, setPhoneNumber] = useState("");
-  let [email, setEmail] = useState("");
-  let [selectedCheckboxValues, setSelectedCheckboxValues] = useState({
+  const [receiveEmails, setReceiveEmails] = useState(false);
+  const [businessName, setBusinessName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [selectedCheckboxValues, setSelectedCheckboxValues] = useState({
     awareness: false,
     invite: false,
     usability: false,
+  });
+  const [errors, setErrors] = useState({
+    email: "",
+    phone_number: "",
   });
 
   const updateCheckboxValue = (attr) => {
@@ -25,8 +29,57 @@ export default function ScheduleCall() {
     });
   };
 
+  const handleEmailError = (e) => {
+    e.preventDefault();
+
+    if (e.target.value) {
+      setErrors({
+        ...errors,
+        email: "Email is not in proper format",
+      });
+    } else {
+      setErrors({
+        ...errors,
+        email: "Email field is required",
+      });
+    }
+  };
+
+  const handlePhoneNumberError = (e) => {
+    e.preventDefault();
+
+    setErrors({
+      ...errors,
+      phone_number: "Phone number is not in proper format",
+    });
+  };
+
+  const clearErrors = () => {
+    setErrors({
+      email: "",
+      phone_number: "",
+    });
+  };
+
   return (
     <>
+      <div
+        hidden={!errors.email && !errors.phone_number}
+        className={`${styles.errorContainer} container ph-2 pt-2 mt-5`}
+      >
+        <ul className="pl-3 pt-2">
+          {errors.email && (
+            <li>
+              <a href="#email">{errors.email}</a>
+            </li>
+          )}
+          {errors.phone_number && (
+            <li>
+              <a href="#phone-number">{errors.phone_number}</a>
+            </li>
+          )}
+        </ul>
+      </div>
       <div className="headingContent">
         <div className="container">
           <h1>Schedule a Call</h1>
@@ -46,14 +99,19 @@ export default function ScheduleCall() {
             forAttr="business-name"
             val={businessName}
             handleChange={(e) => setBusinessName(e.target.value)}
-            required={true}
+            name="business_name"
           />
           <CustomInput
             label="Phone Number"
             forAttr="phone-number"
             val={phoneNumber}
             handleChange={(e) => setPhoneNumber(e.target.value)}
-            required={true}
+            type="tel"
+            otherAttributes={{
+              pattern: "[0-9]{3}-[0-9]{3}-[0-9]{4}",
+            }}
+            name="phone_number"
+            handleError={handlePhoneNumberError}
           />
           <CustomInput
             label="Email"
@@ -62,6 +120,8 @@ export default function ScheduleCall() {
             handleChange={(e) => setEmail(e.target.value)}
             type="email"
             required={true}
+            handleError={handleEmailError}
+            name="email"
           />
           <fieldset className={`${styles.fieldset}`}>
             <legend className={`${styles.legend}`}>
