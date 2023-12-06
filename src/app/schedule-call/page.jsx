@@ -136,26 +136,29 @@ export default function ScheduleCall() {
           />
           <fieldset className={`${styles.fieldset}`}>
             <legend className={`${styles.legend}`}>
-              What would you like to talk about
+              <h3 id="topic-to-talk-about">
+                What would you like to talk about
+              </h3>
             </legend>
-            <CustomCheckbox
-              label="Awareness Lab Days and Workshops"
-              forAttr="awareness"
-              handleChecked={updateCheckboxValue}
-            />
-            {selectedCheckboxValues.awareness}
-            <CustomCheckbox
-              label="Invite a speaker with disabilities to your event"
-              forAttr="invite"
-              handleChecked={updateCheckboxValue}
-            />
-            {selectedCheckboxValues.invite}
-            <CustomCheckbox
-              label="Usability Testing"
-              forAttr="usability"
-              handleChecked={updateCheckboxValue}
-            />
-            {selectedCheckboxValues.usability}
+            <div role="group" aria-labelledby="topic-to-talk-about">
+              <ul>
+                <CustomCheckbox
+                  label="Awareness Lab Days and Workshops"
+                  forAttr="awareness"
+                  handleChecked={updateCheckboxValue}
+                />
+                <CustomCheckbox
+                  label="Invite a speaker with disabilities to your event"
+                  forAttr="invite"
+                  handleChecked={updateCheckboxValue}
+                />
+                <CustomCheckbox
+                  label="Usability Testing"
+                  forAttr="usability"
+                  handleChecked={updateCheckboxValue}
+                />
+              </ul>
+            </div>
           </fieldset>
           {selectedCheckboxValues.invite && (
             <div className="d-flex flex-column items-center">

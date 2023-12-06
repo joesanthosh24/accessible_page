@@ -19,7 +19,7 @@ export const CustomCheckbox = ({ label, forAttr, handleChecked }) => {
   };
 
   return (
-    <div className="d-flex items-center pb-2">
+    <li className="d-flex items-center pb-2">
       <div
         role="checkbox"
         aria-checked={isChecked}
@@ -33,7 +33,7 @@ export const CustomCheckbox = ({ label, forAttr, handleChecked }) => {
       >
         {label}
       </div>
-    </div>
+    </li>
   );
 };
 
