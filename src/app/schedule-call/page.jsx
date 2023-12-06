@@ -24,23 +24,23 @@ export default function ScheduleCall() {
       <div className="container message"></div>
       <div className="container form-container">
         <form className="form">
-          <div className="form-group d-flex items-center">
+          <div className="d-flex items-center pb-2">
             <label htmlFor="business-name" className="mr-2">
               Business Name
             </label>
-            <input type="text" className="form-control" id="business-name" />
+            <input type="text" className="" id="business-name" />
           </div>
-          <div className="form-group d-flex items-center">
+          <div className="d-flex items-center pb-2">
             <label htmlFor="phone-number" className="mr-2">
               Phone Number
             </label>
-            <input type="text" className="form-control" id="phone-number" />
+            <input type="text" className="" id="phone-number" />
           </div>
-          <div className="form-group d-flex items-center">
+          <div className="d-flex items-center pb-2">
             <label htmlFor="email" className="mr-2">
               Email
             </label>
-            <input type="text" className="form-control" id="email" />
+            <input type="text" className="" id="email" />
           </div>
           <fieldset className={`${styles.fieldset}`}>
             <legend className={`${styles.legend}`}>
