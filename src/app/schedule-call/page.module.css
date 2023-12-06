@@ -7,10 +7,6 @@
   display: inline-block;
 }
 
-.checkbox {
-  margin-right: 10px;
-}
-
 .scheduleCallBtn {
   padding: 5px 20px;
   cursor: pointer;

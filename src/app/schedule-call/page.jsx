@@ -5,12 +5,25 @@ import CustomSwitch from "../../components/custom-switch/custom-switch.component
 
 import styles from "./page.module.css";
 import CustomInput from "@/components/custom-text-input/custom-text-input.component";
+import CustomCheckbox from "@/components/custom-checkbox/custom-checkbox.component";
 
 export default function ScheduleCall() {
   let [receiveEmails, setReceiveEmails] = useState(false);
   let [businessName, setBusinessName] = useState("");
   let [phoneNumber, setPhoneNumber] = useState("");
   let [email, setEmail] = useState("");
+  let [selectedCheckboxValues, setSelectedCheckboxValues] = useState({
+    awareness: false,
+    invite: false,
+    usability: false,
+  });
+
+  const updateCheckboxValue = (attr) => {
+    setSelectedCheckboxValues({
+      ...selectedCheckboxValues,
+      [attr]: !selectedCheckboxValues[attr],
+    });
+  };
 
   return (
     <>
@@ -54,32 +67,23 @@ export default function ScheduleCall() {
             <legend className={`${styles.legend}`}>
               What would you like to talk about
             </legend>
-            <div className="d-flex items-center pb-2">
-              <input
-                className={styles.checkbox}
-                type="checkbox"
-                id="awareness"
-              />
-              <label htmlFor="awareness">
-                Awareness Lab Days and workshops
-              </label>
-            </div>
-            <div className="d-flex items-center pb-2">
-              <input className={styles.checkbox} type="checkbox" id="invite" />
-              <label htmlFor="invite">
-                Invite a speaker with disabilities to your event
-              </label>
-            </div>
-            <div className="d-flex items-center pb-2">
-              <input
-                className={styles.checkbox}
-                type="checkbox"
-                id="usability"
-              />
-              <label htmlFor="usability">Usability testing</label>
-            </div>
+            <CustomCheckbox
+              label="Awareness Lab Days and Workshops"
+              forAttr="awareness"
+              handleChecked={updateCheckboxValue}
+            />
+            <CustomCheckbox
+              label="Invite a speaker with disabilities to your event"
+              forAttr="invite"
+              handleChecked={updateCheckboxValue}
+            />
+            <CustomCheckbox
+              label="Usability Testing"
+              forAttr="usability"
+              handleChecked={updateCheckboxValue}
+            />
           </fieldset>
-          <div className="form-group d-flex flex-column items-center">
+          <div className="d-flex flex-column items-center">
             <label htmlFor="event-desc">Tell us about your Event</label>
             <textarea id="event-desc"></textarea>
           </div>
