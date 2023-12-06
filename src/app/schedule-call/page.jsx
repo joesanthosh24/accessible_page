@@ -4,9 +4,13 @@ import { useState } from "react";
 import CustomSwitch from "../../components/custom-switch/custom-switch.component";
 
 import styles from "./page.module.css";
+import CustomInput from "@/components/custom-text-input/custom-text-input.component";
 
 export default function ScheduleCall() {
-  const [receiveEmails, setReceiveEmails] = useState(false);
+  let [receiveEmails, setReceiveEmails] = useState(false);
+  let [businessName, setBusinessName] = useState("");
+  let [phoneNumber, setPhoneNumber] = useState("");
+  let [email, setEmail] = useState("");
 
   return (
     <>
@@ -24,24 +28,28 @@ export default function ScheduleCall() {
       <div className="container message"></div>
       <div className="container form-container">
         <form className="form">
-          <div className="d-flex items-center pb-2">
-            <label htmlFor="business-name" className="mr-2">
-              Business Name
-            </label>
-            <input type="text" className="" id="business-name" />
-          </div>
-          <div className="d-flex items-center pb-2">
-            <label htmlFor="phone-number" className="mr-2">
-              Phone Number
-            </label>
-            <input type="text" className="" id="phone-number" />
-          </div>
-          <div className="d-flex items-center pb-2">
-            <label htmlFor="email" className="mr-2">
-              Email
-            </label>
-            <input type="text" className="" id="email" />
-          </div>
+          <CustomInput
+            label="Business Name"
+            forAttr="business-name"
+            val={businessName}
+            handleChange={(e) => setBusinessName(e.target.value)}
+            required={true}
+          />
+          <CustomInput
+            label="Phone Number"
+            forAttr="phone-number"
+            val={phoneNumber}
+            handleChange={(e) => setPhoneNumber(e.target.value)}
+            required={true}
+          />
+          <CustomInput
+            label="Email"
+            forAttr="email"
+            val={email}
+            handleChange={(e) => setEmail(e.target.value)}
+            type="email"
+            required={true}
+          />
           <fieldset className={`${styles.fieldset}`}>
             <legend className={`${styles.legend}`}>
               What would you like to talk about
