@@ -4,9 +4,13 @@ import { useState } from "react";
 import CustomSwitch from "../../components/custom-switch/custom-switch.component";
 
 import styles from "./page.module.css";
+import CustomInput from "@/components/custom-text-input/custom-text-input.component";
 
 export default function ScheduleCall() {
-  const [receiveEmails, setReceiveEmails] = useState(false);
+  let [receiveEmails, setReceiveEmails] = useState(false);
+  let [businessName, setBusinessName] = useState("");
+  let [phoneNumber, setPhoneNumber] = useState("");
+  let [email, setEmail] = useState("");
 
   return (
     <>
@@ -24,29 +28,33 @@ export default function ScheduleCall() {
       <div className="container message"></div>
       <div className="container form-container">
         <form className="form">
-          <div className="form-group d-flex items-center">
-            <label htmlFor="business-name" className="mr-2">
-              Business Name
-            </label>
-            <input type="text" className="form-control" id="business-name" />
-          </div>
-          <div className="form-group d-flex items-center">
-            <label htmlFor="phone-number" className="mr-2">
-              Phone Number
-            </label>
-            <input type="text" className="form-control" id="phone-number" />
-          </div>
-          <div className="form-group d-flex items-center">
-            <label htmlFor="email" className="mr-2">
-              Email
-            </label>
-            <input type="text" className="form-control" id="email" />
-          </div>
+          <CustomInput
+            label="Business Name"
+            forAttr="business-name"
+            val={businessName}
+            handleChange={(e) => setBusinessName(e.target.value)}
+            required={true}
+          />
+          <CustomInput
+            label="Phone Number"
+            forAttr="phone-number"
+            val={phoneNumber}
+            handleChange={(e) => setPhoneNumber(e.target.value)}
+            required={true}
+          />
+          <CustomInput
+            label="Email"
+            forAttr="email"
+            val={email}
+            handleChange={(e) => setEmail(e.target.value)}
+            type="email"
+            required={true}
+          />
           <fieldset className={`${styles.fieldset}`}>
             <legend className={`${styles.legend}`}>
               What would you like to talk about
             </legend>
-            <div className="form-group d-flex items-center">
+            <div className="d-flex items-center pb-2">
               <input
                 className={styles.checkbox}
                 type="checkbox"
@@ -56,13 +64,13 @@ export default function ScheduleCall() {
                 Awareness Lab Days and workshops
               </label>
             </div>
-            <div className="form-group d-flex items-center">
+            <div className="d-flex items-center pb-2">
               <input className={styles.checkbox} type="checkbox" id="invite" />
               <label htmlFor="invite">
                 Invite a speaker with disabilities to your event
               </label>
             </div>
-            <div className="form-group d-flex items-center">
+            <div className="d-flex items-center pb-2">
               <input
                 className={styles.checkbox}
                 type="checkbox"
