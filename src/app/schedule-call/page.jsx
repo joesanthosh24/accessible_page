@@ -54,7 +54,7 @@ export default function ScheduleCall() {
             <legend className={`${styles.legend}`}>
               What would you like to talk about
             </legend>
-            <div className="form-group d-flex items-center">
+            <div className="d-flex items-center pb-2">
               <input
                 className={styles.checkbox}
                 type="checkbox"
@@ -64,13 +64,13 @@ export default function ScheduleCall() {
                 Awareness Lab Days and workshops
               </label>
             </div>
-            <div className="form-group d-flex items-center">
+            <div className="d-flex items-center pb-2">
               <input className={styles.checkbox} type="checkbox" id="invite" />
               <label htmlFor="invite">
                 Invite a speaker with disabilities to your event
               </label>
             </div>
-            <div className="form-group d-flex items-center">
+            <div className="d-flex items-center pb-2">
               <input
                 className={styles.checkbox}
                 type="checkbox"
