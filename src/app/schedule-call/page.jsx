@@ -21,6 +21,7 @@ export default function ScheduleCall() {
     email: "",
     phone_number: "",
   });
+  const [thankYouMessage, setThankYouMessage] = useState("");
 
   const updateCheckboxValue = (attr) => {
     setSelectedCheckboxValues({
@@ -29,29 +30,32 @@ export default function ScheduleCall() {
     });
   };
 
-  const handleEmailError = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (e.target.value) {
-      setErrors({
-        ...errors,
-        email: "Email is not in proper format",
-      });
-    } else {
-      setErrors({
-        ...errors,
-        email: "Email field is required",
-      });
-    }
-  };
+    clearErrors();
 
-  const handlePhoneNumberError = (e) => {
-    e.preventDefault();
+    setErrors(() => {
+      const errorsObj = {
+        email: "",
+        phone_number: "",
+      };
 
-    setErrors({
-      ...errors,
-      phone_number: "Phone number is not in proper format",
+      if (!email) {
+        errorsObj["email"] = "Email field is required";
+      } else if (email && (!email.includes("@") || !email.includes("."))) {
+        errorsObj["email"] = "Email is not in proper format";
+      }
+      if (phoneNumber && !phoneNumber.match(/\d{3}-\d{3}-\d{4}/)) {
+        errorsObj["phone_number"] = "Phone number is not in proper format";
+      }
+
+      return errorsObj;
     });
+
+    if (!errors.email && !errors.phone_number) {
+      setThankYouMessage("Thank you");
+    }
   };
 
   const clearErrors = () => {
@@ -68,14 +72,14 @@ export default function ScheduleCall() {
         className={`${styles.errorContainer} container ph-2 pt-2 mt-5`}
       >
         <ul className="pl-3 pt-2">
-          {errors.email && (
-            <li>
-              <a href="#email">{errors.email}</a>
-            </li>
-          )}
           {errors.phone_number && (
             <li>
               <a href="#phone-number">{errors.phone_number}</a>
+            </li>
+          )}
+          {errors.email && (
+            <li>
+              <a href="#email">{errors.email}</a>
             </li>
           )}
         </ul>
@@ -93,7 +97,7 @@ export default function ScheduleCall() {
       </div>
       <div className="container message"></div>
       <div className="container form-container">
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
           <CustomInput
             label="Business Name"
             forAttr="business-name"
@@ -107,20 +111,16 @@ export default function ScheduleCall() {
             val={phoneNumber}
             handleChange={(e) => setPhoneNumber(e.target.value)}
             type="tel"
-            otherAttributes={{
-              pattern: "[0-9]{3}-[0-9]{3}-[0-9]{4}",
-            }}
             name="phone_number"
-            handleError={handlePhoneNumberError}
+            otherAttributes={{
+              placeholder: "Format: XXX-XXX-XXXX",
+            }}
           />
           <CustomInput
             label="Email"
             forAttr="email"
             val={email}
             handleChange={(e) => setEmail(e.target.value)}
-            type="email"
-            required={true}
-            handleError={handleEmailError}
             name="email"
           />
           <fieldset className={`${styles.fieldset}`}>
