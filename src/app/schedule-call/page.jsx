@@ -50,12 +50,14 @@ export default function ScheduleCall() {
         errorsObj["phone_number"] = "Phone number is not in proper format";
       }
 
+      if (!errorsObj["email"] && !errorsObj["phone_number"]) {
+        setThankYouMessage(
+          "Thank you for your interest in Empower Ability Labs. We will be in touch with you shortly."
+        );
+      }
+
       return errorsObj;
     });
-
-    if (!errors.email && !errors.phone_number) {
-      setThankYouMessage("Thank you");
-    }
   };
 
   const clearErrors = () => {
@@ -63,13 +65,14 @@ export default function ScheduleCall() {
       email: "",
       phone_number: "",
     });
+    setThankYouMessage("");
   };
 
   return (
     <>
       <div
         hidden={!errors.email && !errors.phone_number}
-        className={`${styles.errorContainer} container ph-2 pt-2 mt-5`}
+        className={`${styles.messageContainer} ${styles.errorContainer} container ph-2 pt-2 mt-5`}
       >
         <ul className="pl-3 pt-2">
           {errors.phone_number && (
@@ -83,6 +86,13 @@ export default function ScheduleCall() {
             </li>
           )}
         </ul>
+      </div>
+      <div
+        hidden={!thankYouMessage}
+        aria-hidden={!thankYouMessage}
+        className={`${styles.messageContainer} ${styles.thankYouMessageContainer} container ph-2 pt-2 mt-5`}
+      >
+        <p>{thankYouMessage}</p>
       </div>
       <div className="headingContent">
         <div className="container">
