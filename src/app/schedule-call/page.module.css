@@ -11,13 +11,13 @@
   padding: 5px 20px;
   cursor: pointer;
   color: #fff;
-  background-color: #07527d;
+  background-color: #363cb3;
   border: none;
 }
 
 .scheduleCallBtn:active,
 .scheduleCallBtn:focus {
-  border-radius: 5px solid #07527d;
+  border-radius: 5px solid #363cb3;
 }
 
 .messageContainer {

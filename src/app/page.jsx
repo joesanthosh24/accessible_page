@@ -1,4 +1,10 @@
+"use client";
+
+import styles from "./page.module.css";
+
 export default function Home() {
+  const openModal = () => {};
+
   return (
     <>
       <div className="headingContent">
@@ -17,7 +23,7 @@ export default function Home() {
       </div>
 
       <div className="container">
-        <h2 className="community">Meet The Empower Community</h2>
+        <button className={styles.community}>Meet The Empower Community</button>
         <div className="row">
           <div className="col-md-4">
             <h3>Our Approach</h3>
@@ -32,6 +38,7 @@ export default function Home() {
               href="https://www.google.com/search/howsearchworks/our-approach/"
               target="_blank"
               title="Our Approach"
+              className={styles.learnMoreLink}
             >
               Learn More
             </a>
@@ -50,6 +57,7 @@ export default function Home() {
               href="https://www.elevenways.be/en/services"
               target="_blank"
               title="Services"
+              className={styles.learnMoreLink}
             >
               Learn More
             </a>
@@ -66,6 +74,7 @@ export default function Home() {
               href="https://dictionary.cambridge.org/us/dictionary/english/testimonial"
               target="_blank"
               title="Testimonials"
+              className={styles.learnMoreLink}
             >
               Learn More
             </a>
