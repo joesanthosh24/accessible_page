@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Head from "next/head";
 
 import CustomSwitch from "../../components/custom-switch/custom-switch.component";
 
@@ -107,7 +108,7 @@ export default function ScheduleCall() {
       </div>
       <div className="container message"></div>
       <div className="container form-container">
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="form">
           <CustomInput
             label="Business Name"
             forAttr="business-name"
@@ -135,23 +136,29 @@ export default function ScheduleCall() {
           />
           <fieldset className={`${styles.fieldset}`}>
             <legend className={`${styles.legend}`}>
-              What would you like to talk about
+              <h3 id="topic-to-talk-about">
+                What would you like to talk about
+              </h3>
             </legend>
-            <CustomCheckbox
-              label="Awareness Lab Days and Workshops"
-              forAttr="awareness"
-              handleChecked={updateCheckboxValue}
-            />
-            <CustomCheckbox
-              label="Invite a speaker with disabilities to your event"
-              forAttr="invite"
-              handleChecked={updateCheckboxValue}
-            />
-            <CustomCheckbox
-              label="Usability Testing"
-              forAttr="usability"
-              handleChecked={updateCheckboxValue}
-            />
+            <div role="group" aria-labelledby="topic-to-talk-about">
+              <ul>
+                <CustomCheckbox
+                  label="Awareness Lab Days and Workshops"
+                  forAttr="awareness"
+                  handleChecked={updateCheckboxValue}
+                />
+                <CustomCheckbox
+                  label="Invite a speaker with disabilities to your event"
+                  forAttr="invite"
+                  handleChecked={updateCheckboxValue}
+                />
+                <CustomCheckbox
+                  label="Usability Testing"
+                  forAttr="usability"
+                  handleChecked={updateCheckboxValue}
+                />
+              </ul>
+            </div>
           </fieldset>
           {selectedCheckboxValues.invite && (
             <div className="d-flex flex-column items-center">
@@ -166,7 +173,7 @@ export default function ScheduleCall() {
               labelText="Receive emails about updates and services"
             />
           </div>
-          <button className={styles.scheduleCallBtn} type="submit">
+          <button className={styles.scheduleCallBtn} onClick={handleSubmit}>
             Schedule a Call
           </button>
         </form>

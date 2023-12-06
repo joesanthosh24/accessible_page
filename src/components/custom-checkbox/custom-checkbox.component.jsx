@@ -11,17 +11,29 @@ export const CustomCheckbox = ({ label, forAttr, handleChecked }) => {
     handleChecked(forAttr);
   };
 
+  const handleChangeWithKey = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleChange();
+    }
+  };
+
   return (
-    <div className="d-flex items-center pb-2">
-      <input
+    <li className="d-flex items-center pb-2">
+      <div
+        role="checkbox"
+        aria-checked={isChecked}
         className={styles.checkbox}
         type="checkbox"
         id={forAttr}
         checked={isChecked}
         onChange={handleChange}
-      />
-      <label htmlFor={forAttr}>{label}</label>
-    </div>
+        onKeyDown={handleChangeWithKey}
+        tabIndex={0}
+      >
+        {label}
+      </div>
+    </li>
   );
 };
 
