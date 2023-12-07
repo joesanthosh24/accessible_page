@@ -1,8 +1,6 @@
-# React + Vite
+# Accessible Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Members: Joe Santhosh, Abulasad Elgamoudi, Rabikkali Dhuka, Himanshu
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Description
+An Accessible page created for final project of Accessible by Desing
