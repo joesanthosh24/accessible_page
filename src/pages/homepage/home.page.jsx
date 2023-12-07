@@ -1,10 +1,9 @@
-"use client";
+import React, { useState } from "react";
 
-import CustomLightboxModal from "@/components/custom-lightbox-modal/custom-lightbox-modal.component";
-import styles from "./page.module.css";
-import { useState } from "react";
+import "./home.styles.css";
+import CustomLightboxModal from "../../components/custom-modal/custom-modal.component";
 
-export default function Home() {
+const Home = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   return (
@@ -49,10 +48,7 @@ export default function Home() {
             </ul>
           </CustomLightboxModal>
         )}
-        <button
-          className={styles.community}
-          onClick={() => setModalIsOpen(true)}
-        >
+        <button className="community" onClick={() => setModalIsOpen(true)}>
           Meet The Empower Community
         </button>
         <div className="row">
@@ -69,7 +65,7 @@ export default function Home() {
               href="https://www.google.com/search/howsearchworks/our-approach/"
               target="_blank"
               title="Our Approach"
-              className={styles.learnMoreLink}
+              className="learnMoreLink"
             >
               Learn More
             </a>
@@ -88,7 +84,7 @@ export default function Home() {
               href="https://www.elevenways.be/en/services"
               target="_blank"
               title="Services"
-              className={styles.learnMoreLink}
+              className="learnMoreLink"
             >
               Learn More
             </a>
@@ -105,7 +101,7 @@ export default function Home() {
               href="https://dictionary.cambridge.org/us/dictionary/english/testimonial"
               target="_blank"
               title="Testimonials"
-              className={styles.learnMoreLink}
+              className="learnMoreLink"
             >
               Learn More
             </a>
@@ -116,4 +112,6 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+
+export default Home;
