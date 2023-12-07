@@ -6,6 +6,8 @@ import CustomSwitch from "../../components/custom-switch/custom-switch.component
 import styles from "./page.module.css";
 import CustomInput from "@/components/custom-text-input/custom-text-input.component";
 import CustomCheckbox from "@/components/custom-checkbox/custom-checkbox.component";
+import ErrorMessage from "@/components/error-message/error-message.component";
+import Message from "@/components/thank-you-message/message.component";
 
 export default function ScheduleCall() {
   const [receiveEmails, setReceiveEmails] = useState(false);
@@ -81,30 +83,8 @@ export default function ScheduleCall() {
           </p>
         </div>
       </div>
-      <div
-        hidden={!errors.email && !errors.phone_number}
-        className={`${styles.messageContainer} ${styles.errorContainer} container ph-2 pt-2 mb-5`}
-      >
-        <ul className="pl-3 pt-2">
-          {errors.phone_number && (
-            <li>
-              <a href="#phone-number">{errors.phone_number}</a>
-            </li>
-          )}
-          {errors.email && (
-            <li>
-              <a href="#email">{errors.email}</a>
-            </li>
-          )}
-        </ul>
-      </div>
-      <div
-        hidden={!thankYouMessage}
-        aria-hidden={!thankYouMessage}
-        className={`${styles.messageContainer} ${styles.thankYouMessageContainer} container ph-2 pt-2 mb-5`}
-      >
-        <p>{thankYouMessage}</p>
-      </div>
+      <ErrorMessage errors={errors} />
+      <Message message={thankYouMessage} />
       <div className="container message"></div>
       <div className="container form-container">
         <form className="form">
