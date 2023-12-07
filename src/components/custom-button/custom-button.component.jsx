@@ -1,5 +1,4 @@
-import React from "react";
-
+/* eslint-disable react/prop-types */
 import "./custom-button.styles.css";
 
 const CustomButton = ({ btnText, handleClick, extraAttributes }) => {
