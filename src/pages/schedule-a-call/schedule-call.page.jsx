@@ -84,7 +84,7 @@ export default function ScheduleCall() {
             <div className="col-md-1">
               <img
                 className="image"
-                src="./images/scheduleacall.png"
+                src="./accessible_page/images/scheduleacall.png"
                 alt="Person Scheduling a Call"
                 tabIndex="0"
               />
