@@ -18,34 +18,55 @@ const Navbar = () => {
           />
         </a>
       </Link>
-      <nav>
+      <nav aria-label="Empower Ability Labs">
         <div>
-          <ul className={styles.aNavbarList}>
-            <li className={`${pathname === "/" ? styles.activeItemLink : ""}`}>
+          <ul
+            className={styles.aNavbarList}
+            role="menubar"
+            aria-label="Empower Ability Labs"
+          >
+            <li
+              role="none"
+              className={`${pathname === "/" ? styles.activeItemLink : ""}`}
+            >
               <Link href="/" legacyBehavior>
-                <a className={styles.itemLink} title="Home Page">
+                <a
+                  role="menuitem"
+                  className={styles.itemLink}
+                  title="Home Page"
+                >
                   Home
                 </a>
               </Link>
             </li>
             <li
+              role="none"
               className={`${
                 pathname === "/services" ? styles.activeItemLink : ""
               }`}
             >
               <Link href="/services" legacyBehavior>
-                <a className={styles.itemLink} title="Services Page">
+                <a
+                  role="menuitem"
+                  className={styles.itemLink}
+                  title="Services Page"
+                >
                   Services
                 </a>
               </Link>
             </li>
             <li
+              role="none"
               className={`${
                 pathname === "/schedule-call" ? styles.activeItemLink : ""
               }`}
             >
               <Link href="/schedule-call" legacyBehavior>
-                <a className={styles.itemLink} title="Schedule a Call Page">
+                <a
+                  role="menuitem"
+                  className={styles.itemLink}
+                  title="Schedule a Call Page"
+                >
                   Schedule a Call
                 </a>
               </Link>

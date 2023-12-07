@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main>{children}</main>
         <footer className="container">
-          <p>Copyright Accessible Knowledge Base 2023</p>
+          <p>© Copyright Accessible Knowledge Base 2023</p>
         </footer>
       </body>
     </html>
