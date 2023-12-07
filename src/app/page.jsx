@@ -57,7 +57,7 @@ export default function Home() {
         </button>
         <div className="row">
           <div className="col-md-4">
-            <h3>Our Approach</h3>
+            <h2>Our Approach</h2>
             <p>
               Empower Ability Labs utilizes a hands-on approach to raise
               awareness and promote empathy. Our immersive workshops and lab
@@ -75,7 +75,7 @@ export default function Home() {
             </a>
           </div>
           <div className="col-md-4">
-            <h3>Services</h3>
+            <h2>Services</h2>
             <p>
               Promote accessibility awareness and enhance the user experience.
             </p>
@@ -94,7 +94,7 @@ export default function Home() {
             </a>
           </div>
           <div className="col-md-4">
-            <h3>Testimonials</h3>
+            <h2>Testimonials</h2>
             <p>
               Invite a speaker with disabilities to share their unique journey.
               This captivating addition to your upcoming event will offer
