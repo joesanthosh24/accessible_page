@@ -1,9 +1,11 @@
 "use client";
 
+import CustomLightboxModal from "@/components/custom-lightbox-modal/custom-lightbox-modal.component";
 import styles from "./page.module.css";
+import { useState } from "react";
 
 export default function Home() {
-  const openModal = () => {};
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   return (
     <>
@@ -22,8 +24,37 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container">
-        <button className={styles.community}>Meet The Empower Community</button>
+      <div className="container position-relative">
+        {modalIsOpen && (
+          <CustomLightboxModal
+            hidden={!modalIsOpen}
+            headingText="Community Steering Committee"
+            closeModal={() => setModalIsOpen(false)}
+            labelledBy="modal_label"
+            describedBy="modal_content"
+            isOpen={modalIsOpen}
+          >
+            <p>
+              We get an aha! moments from product managers who try our services
+              for the first time. We offered many lab days, workshops and
+              offered usability testing services to many companies and
+              organizations including:
+            </p>
+            <ul>
+              <li>McGill University</li>
+              <li>Walmart.ca</li>
+              <li>Apple.ca</li>
+              <li>Google.ca</li>
+              <li>Government of Canada</li>
+            </ul>
+          </CustomLightboxModal>
+        )}
+        <button
+          className={styles.community}
+          onClick={() => setModalIsOpen(true)}
+        >
+          Meet The Empower Community
+        </button>
         <div className="row">
           <div className="col-md-4">
             <h3>Our Approach</h3>
