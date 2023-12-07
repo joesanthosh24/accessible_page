@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 import "./thank-you-message.styles.css";
 

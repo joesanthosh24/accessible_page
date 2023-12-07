@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-target-blank */
-import { useState } from "react";
+import React, { useState } from "react";
 
 import "./home.styles.css";
 import CustomLightboxModal from "../../components/custom-modal/custom-modal.component";

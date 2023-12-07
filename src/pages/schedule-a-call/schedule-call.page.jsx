@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import CustomSwitch from "../../components/custom-switch/custom-switch.component";
 
@@ -84,7 +84,7 @@ export default function ScheduleCall() {
             <div className="col-md-1">
               <img
                 className="image"
-                src="./accessible_page/images/scheduleacall.png"
+                src="https://joesanthosh24.github.io/accessible_page/images/scheduleacall.png"
                 alt="Person Scheduling a Call"
                 tabIndex="0"
               />
