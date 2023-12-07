@@ -1,3 +1,5 @@
+import React from "react";
+
 const Services = () => {
   return (
     <>
@@ -16,7 +18,7 @@ const Services = () => {
             <div className="col-md-4 d-flex justify-content-center">
               <img
                 className="img-fluid"
-                src="./accessible_page/images/services.png"
+                src="https://joesanthosh24.github.io/accessible_page/images/services.png"
                 alt="Smiley Face doing thumbs up"
                 tabIndex="0"
               />

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import React, { useState } from "react";
 
 import "./custom-checkbox.styles.css";
 
