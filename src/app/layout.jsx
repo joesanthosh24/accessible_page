@@ -1,13 +1,10 @@
 "use client";
 
-import { Inter } from "next/font/google";
 import { usePathname } from "next/navigation";
 
 import Navbar from "../components/navbar-component";
 
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
@@ -43,11 +40,11 @@ export default function RootLayout({ children }) {
             : "Schedule a Call"}
         </title>
       </head>
-      <body className={inter.className}>
+      <body>
         <Navbar />
         <main>{children}</main>
         <footer className="container">
-          <p>Copyright Accessible Knowledge Base 2023</p>
+          <p>© Copyright Accessible Knowledge Base 2023</p>
         </footer>
       </body>
     </html>
