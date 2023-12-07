@@ -16,7 +16,7 @@ const Services = () => {
             <div className="col-md-4 d-flex justify-content-center">
               <img
                 className="img-fluid"
-                src="./images/services.png"
+                src="/images/services.png"
                 alt="Smiley Face doing thumbs up"
                 tabIndex="0"
               />
