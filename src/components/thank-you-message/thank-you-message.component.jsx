@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+/* eslint-disable react/prop-types */
+import { useEffect, useRef } from "react";
 
-import styles from "./message.module.css";
+import "./thank-you-message.styles.css";
 
 const Message = ({ message }) => {
   const containerRef = useRef();
@@ -17,7 +18,7 @@ const Message = ({ message }) => {
       ref={containerRef}
       hidden={!message}
       aria-hidden={!message}
-      className={`${styles.thankYouMessageContainer} container ph-2 pt-2 mb-5`}
+      className="thankYouMessageContainer container ph-2 pt-2 mb-5"
     >
       <p>{message}</p>
     </div>

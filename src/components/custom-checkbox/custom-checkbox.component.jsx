@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable react/prop-types */
+import { useState } from "react";
 
-import styles from "./custom-checkbox.component.module.css";
+import "./custom-checkbox.styles.css";
 
-export const CustomCheckbox = ({ label, forAttr, handleChecked }) => {
+const CustomCheckbox = ({ label, forAttr, handleChecked }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleChange = () => {
@@ -23,7 +25,7 @@ export const CustomCheckbox = ({ label, forAttr, handleChecked }) => {
       <div
         role="checkbox"
         aria-checked={isChecked}
-        className={styles.checkbox}
+        className="checkbox"
         type="checkbox"
         id={forAttr}
         checked={isChecked}

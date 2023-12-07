@@ -1,13 +1,12 @@
-"use client";
 import { useState } from "react";
 
 import CustomSwitch from "../../components/custom-switch/custom-switch.component";
 
-import styles from "./page.module.css";
-import CustomInput from "@/components/custom-text-input/custom-text-input.component";
-import CustomCheckbox from "@/components/custom-checkbox/custom-checkbox.component";
-import ErrorMessage from "@/components/error-message/error-message.component";
-import Message from "@/components/thank-you-message/message.component";
+import "./schedule-call.styles.css";
+import CustomInput from "../../components/custom-textinput/custom-textinput.component";
+import CustomCheckbox from "../../components/custom-checkbox/custom-checkbox.component";
+import ErrorMessage from "../../components/error-message/error-message.component";
+import Message from "../../components/thank-you-message/thank-you-message.component";
 
 export default function ScheduleCall() {
   const [receiveEmails, setReceiveEmails] = useState(false);
@@ -84,7 +83,7 @@ export default function ScheduleCall() {
             </p>
             <div className="col-md-1">
               <img
-                className={`${styles.image}`}
+                className="image"
                 src="./images/scheduleacall.png"
                 alt="Person Scheduling a Call"
                 tabIndex="0"
@@ -123,8 +122,8 @@ export default function ScheduleCall() {
             handleChange={(e) => setEmail(e.target.value)}
             name="email"
           />
-          <fieldset className={`${styles.fieldset}`}>
-            <legend className={`${styles.legend}`}>
+          <fieldset className="fieldset">
+            <legend className="legend">
               <h2 id="topic-to-talk-about">
                 What would you like to talk about
               </h2>
@@ -162,7 +161,7 @@ export default function ScheduleCall() {
               labelText="Receive emails about updates and services"
             />
           </div>
-          <button className={styles.scheduleCallBtn} onClick={handleSubmit}>
+          <button className="scheduleCallBtn" onClick={handleSubmit}>
             Schedule a Call
           </button>
         </form>

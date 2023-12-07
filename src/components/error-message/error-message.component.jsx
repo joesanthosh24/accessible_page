@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+/* eslint-disable react/prop-types */
+import { useEffect, useRef } from "react";
 
-import styles from "./error-message.module.css";
+import "./error-message.styles.css";
 
 const ErrorMessage = ({ errors }) => {
   const phoneNumRef = useRef();
@@ -17,7 +18,7 @@ const ErrorMessage = ({ errors }) => {
   return (
     <div
       hidden={!errors.email && !errors.phone_number}
-      className={`${styles.errorContainer} container ph-2 pt-2 mb-5`}
+      className="errorContainer container ph-2 pt-2 mb-5"
     >
       <ul className="pl-3 pt-2">
         {errors.phone_number && (

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./custom-switch.styles.css";
 
 const CustomSwitch = ({ toggleChecked, labelText, toggleStatus }) => {

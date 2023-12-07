@@ -1,10 +1,9 @@
-import React from "react";
-
-import styles from "./custom-button.module.css";
+/* eslint-disable react/prop-types */
+import "./custom-button.styles.css";
 
 const CustomButton = ({ btnText, handleClick, extraAttributes }) => {
   return (
-    <button className={styles.btn} {...extraAttributes} onClick={handleClick}>
+    <button className="btn" {...extraAttributes} onClick={handleClick}>
       {btnText}
     </button>
   );

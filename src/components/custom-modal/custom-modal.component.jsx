@@ -1,6 +1,7 @@
-import React, { useRef, useEffect } from "react";
+/* eslint-disable react/prop-types */
+import { useRef, useEffect } from "react";
 
-import styles from "./custom-lightbox-modal.module.css";
+import "./custom-modal.styles.css";
 
 import CustomButton from "../custom-button/custom-button.component";
 
@@ -34,22 +35,22 @@ const CustomLightboxModal = ({
 
   return (
     <>
-      <div className={styles.overlay}></div>
+      <div className="overlay"></div>
       <div
         role="dialog"
         id="empower-dialog"
         aria-labelledby={labelledBy}
         aria-modal="true"
-        className={`${styles.dialog}`}
+        className="dialog"
         aria-describedby={describedBy}
       >
-        <h2 id={labelledBy} className={styles.dialog_label}>
+        <h2 id={labelledBy} className="dialog_label">
           {headingText}
         </h2>
-        <div className={styles.dialogContent} id={describedBy}>
+        <div className="dialogContent" id={describedBy}>
           {children}
         </div>
-        <div className={styles.closeBtnContainer}>
+        <div className="closeBtnContainer">
           <CustomButton
             btnText="Close"
             extraAttributes={{

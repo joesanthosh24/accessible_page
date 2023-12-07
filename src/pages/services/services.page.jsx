@@ -1,10 +1,4 @@
-import styles from "./page.module.css";
-
-export const metadata = {
-  title: "Services",
-};
-
-export default function Services() {
+const Services = () => {
   return (
     <>
       <div className="headingContent">
@@ -30,7 +24,7 @@ export default function Services() {
           </div>
         </div>
       </div>
-      <div className={`${styles.servicesContainer} container`}>
+      <div className="servicesContainer container">
         <div>
           <h2>Empathy Lab days and workshops</h2>
           <p>
@@ -66,4 +60,6 @@ export default function Services() {
       </div>
     </>
   );
-}
+};
+
+export default Services;
