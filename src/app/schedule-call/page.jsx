@@ -75,12 +75,22 @@ export default function ScheduleCall() {
       <div className="headingContent">
         <div className="container">
           <h1>Schedule a Call</h1>
-          <p>
-            At Empower Ability Labs, we are dedicated to cultivating empathy and
-            driving positive change through immersive experiences. Fill out the
-            form below and we’ll get back to you as soon as we can to schedule a
-            call with our sales team.
-          </p>
+          <div className="d-flex">
+            <p>
+              At Empower Ability Labs, we are dedicated to cultivating empathy
+              and driving positive change through immersive experiences. Fill
+              out the form below and we’ll get back to you as soon as we can to
+              schedule a call with our sales team.
+            </p>
+            <div className="col-md-1">
+              <img
+                className={`${styles.image}`}
+                src="./images/scheduleacall.png"
+                alt="Person Scheduling a Call"
+                tabIndex="0"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <ErrorMessage errors={errors} />
@@ -115,9 +125,9 @@ export default function ScheduleCall() {
           />
           <fieldset className={`${styles.fieldset}`}>
             <legend className={`${styles.legend}`}>
-              <h3 id="topic-to-talk-about">
+              <h2 id="topic-to-talk-about">
                 What would you like to talk about
-              </h3>
+              </h2>
             </legend>
             <div role="group" aria-labelledby="topic-to-talk-about">
               <ul>

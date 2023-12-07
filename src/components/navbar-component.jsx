@@ -8,7 +8,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className={styles.navbarContainer}>
+    <div className={styles.navbarContainer} role="banner">
       <Link href="/" legacyBehavior>
         <a title="Empower Ability Labs Logo">
           <img

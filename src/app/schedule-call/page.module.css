@@ -7,6 +7,11 @@
   display: inline-block;
 }
 
+.image {
+  width: 100px;
+  height: 100px;
+}
+
 .scheduleCallBtn {
   padding: 5px 20px;
   cursor: pointer;
