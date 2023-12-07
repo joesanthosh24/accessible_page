@@ -70,9 +70,20 @@ export default function ScheduleCall() {
 
   return (
     <>
+      <div className="headingContent">
+        <div className="container">
+          <h1>Schedule a Call</h1>
+          <p>
+            At Empower Ability Labs, we are dedicated to cultivating empathy and
+            driving positive change through immersive experiences. Fill out the
+            form below and we’ll get back to you as soon as we can to schedule a
+            call with our sales team.
+          </p>
+        </div>
+      </div>
       <div
         hidden={!errors.email && !errors.phone_number}
-        className={`${styles.messageContainer} ${styles.errorContainer} container ph-2 pt-2 mt-5`}
+        className={`${styles.messageContainer} ${styles.errorContainer} container ph-2 pt-2 mb-5`}
       >
         <ul className="pl-3 pt-2">
           {errors.phone_number && (
@@ -90,20 +101,9 @@ export default function ScheduleCall() {
       <div
         hidden={!thankYouMessage}
         aria-hidden={!thankYouMessage}
-        className={`${styles.messageContainer} ${styles.thankYouMessageContainer} container ph-2 pt-2 mt-5`}
+        className={`${styles.messageContainer} ${styles.thankYouMessageContainer} container ph-2 pt-2 mb-5`}
       >
         <p>{thankYouMessage}</p>
-      </div>
-      <div className="headingContent">
-        <div className="container">
-          <h1>Schedule a Call</h1>
-          <p>
-            At Empower Ability Labs, we are dedicated to cultivating empathy and
-            driving positive change through immersive experiences. Fill out the
-            form below and we’ll get back to you as soon as we can to schedule a
-            call with our sales team.
-          </p>
-        </div>
       </div>
       <div className="container message"></div>
       <div className="container form-container">
@@ -123,7 +123,7 @@ export default function ScheduleCall() {
             type="tel"
             name="phone_number"
             otherAttributes={{
-              placeholder: "Format: XXX-XXX-XXXX",
+              placeholder: "Format: ###-###-####",
             }}
           />
           <CustomInput
