@@ -1,6 +1,5 @@
 "use client";
 
-import { Inter } from "next/font/google";
 import { usePathname } from "next/navigation";
 
 import Navbar from "../components/navbar-component";
